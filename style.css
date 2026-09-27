@@ -20,8 +20,8 @@
   h1,h2,h3{font-family:'Space Grotesk', sans-serif; margin:0; color:var(--ink);}
   a{color:var(--teal-dark);}
   .wrap{max-width:760px; margin:0 auto; padding:0 28px;}
+  @media (min-width:1200px){ .wrap{max-width:900px;} }
 
-  /* HERO */
   header.hero{
     background:var(--ink); color:var(--paper); padding:72px 0 56px;
     animation:fadeUp .7s ease both;
@@ -52,11 +52,11 @@
   section + section{border-top:1px solid var(--line);}
   section h2{font-size:1.4rem; margin-bottom:22px;}
 
-  /* SKILLS MARQUEE */
+
   .marquee-outer{
     overflow:hidden; background:var(--paper-2); border-top:1px solid var(--line);
     border-bottom:1px solid var(--line); padding:16px 0;
-    mask-image:linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+    mask-image:linear-gradient(90deg, transparent, #000 14%, #000 86%, transparent);
   }
   .marquee-track{display:flex; gap:12px; width:max-content; animation:scrollL 30s linear infinite;}
   .marquee-track.reverse{animation-name:scrollR; animation-duration:26s;}
@@ -75,7 +75,6 @@
     .marquee-track{animation:none;}
   }
 
-  /* reveal-on-scroll */
   .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
   .reveal.visible{opacity:1; transform:none;}
   @media (prefers-reduced-motion: reduce){
@@ -83,7 +82,6 @@
     header.hero{animation:none;}
   }
 
-  /* TIMELINE */
   .timeline{position:relative; padding-left:26px;}
   .timeline::before{
     content:""; position:absolute; left:5px; top:6px; bottom:6px; width:2px; background:var(--line);
@@ -116,21 +114,21 @@
   .tl-item li{margin-bottom:5px; font-size:.96rem;}
   .tl-link{display:inline-block; margin-top:10px; font-size:.9rem; font-weight:600;}
 
-  /* BLENDER GALLERY */
+
   .gallery{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
   .gallery figure{margin:0; background:var(--white); border:1px solid var(--line); border-radius:8px; overflow:hidden;}
   .gallery img{display:block; width:100%; height:auto;}
   .gallery figcaption{padding:9px 12px; font-size:.82rem; color:var(--ink-soft);}
   @media (max-width:600px){ .gallery{grid-template-columns:1fr;} }
 
-  /* EDUCATION */
+
   .edu-card{
     background:var(--white); border:1px solid var(--line); border-radius:6px; padding:20px 22px;
   }
   .edu-card h3{font-size:1.05rem;}
   .edu-card .meta{color:var(--ink-soft); font-size:.9rem; margin-top:4px;}
 
-  /* INTERESTS */
+
   .interests{display:flex; flex-wrap:wrap; gap:10px 22px; color:var(--ink-soft); font-size:.94rem;}
 
   footer{padding:34px 0 48px; text-align:center; color:var(--ink-soft); font-size:.88rem;}
